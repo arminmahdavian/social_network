@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # extra
+    'rest_framework',
+
     # local
     'accounts.apps.AccountsConfig',
 ]
