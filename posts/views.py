@@ -84,7 +84,7 @@ class LikeView(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         likes = post.likes.filter(is_liked=True).count()
-        serializer = LikeSerializer(likes, many=True)
+        # serializer = LikeSerializer(likes, many=True)
         return Response({'likes': likes})
 
     def post(self, request, pk):

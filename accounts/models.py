@@ -18,13 +18,18 @@ class Country(models.Model):
         verbose_name_plural = 'Countries'
         # db_table = 'countries'
 
+    def __str__(self):
+        return self.name
+
 
 class Profile(models.Model):
     user = models.OneToOneField(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     phone = models.BigIntegerField(blank=True, null=True, unique=True)
     country = models.ForeignKey(to=Country, on_delete=models.CASCADE, related_name='countries')
-    avatar = models.ImageField(blank=True, null=True)
+    avatar = models.ImageField(blank=True, null=True, upload_to='profile_avatars/')
 
+    def __str__(self):
+        return self.user.username
 
 class Device(models.Model):
     DEVICE_WEB = 1

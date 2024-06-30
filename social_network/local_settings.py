@@ -1,4 +1,5 @@
 DEBUG = True
+DEVEL = True
 
 ALLOWED_HOSTS = []
 
@@ -6,5 +7,7 @@ ALLOWED_HOSTS = []
 # DB_HOST = '127.0.0.1'
 # DB_USER = 'root'
 # DB_PASS = 'armin1989'
+
+BASE_URL = 'http://127.0.0.1:8000/'
 
 
